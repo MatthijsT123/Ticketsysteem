@@ -168,15 +168,33 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ApplicatiesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\TicketsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201912041144272_InitialCreate.cs" />
+    <Compile Include="Migrations\201912041144272_InitialCreate.Designer.cs">
+      <DependentUpon>201912041144272_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912041149149_InitailCreate.cs" />
+    <Compile Include="Migrations\201912041149149_InitailCreate.Designer.cs">
+      <DependentUpon>201912041149149_InitailCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\ApplicatieViewModel.cs" />
+    <Compile Include="Models\ApplicationDbContext.cs" />
+    <Compile Include="Models\Applicatie.cs" />
     <Compile Include="Models\ApplicationUser.cs" />
-    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\GebruikerViewModel.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\MedewerkerViewModel.cs" />
+    <Compile Include="Models\RegisterViewModel.cs" />
+    <Compile Include="Models\Ticket.cs" />
+    <Compile Include="Models\TicketViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -236,6 +254,16 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Tickets\Create.cshtml" />
+    <Content Include="Views\Tickets\Delete.cshtml" />
+    <Content Include="Views\Tickets\Details.cshtml" />
+    <Content Include="Views\Tickets\Edit.cshtml" />
+    <Content Include="Views\Tickets\Index.cshtml" />
+    <Content Include="Views\Applicaties\Create.cshtml" />
+    <Content Include="Views\Applicaties\Delete.cshtml" />
+    <Content Include="Views\Applicaties\Details.cshtml" />
+    <Content Include="Views\Applicaties\Edit.cshtml" />
+    <Content Include="Views\Applicaties\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -252,6 +280,14 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201912041144272_InitialCreate.resx">
+      <DependentUpon>201912041144272_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912041149149_InitailCreate.resx">
+      <DependentUpon>201912041149149_InitailCreate.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
